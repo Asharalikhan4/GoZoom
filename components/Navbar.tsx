@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import MobileNav from "./MobileNav";
+import { SignedIn, UserButton } from "@clerk/nextjs";
 
 const Navbar = () => {
     return (
@@ -10,6 +11,9 @@ const Navbar = () => {
                 <p className="text-[26px] font-extrabold text-white max-sm:hidden">GoZoom</p>
             </Link>
             <div className="flex-between gap-5">
+                <SignedIn>
+                    <UserButton />
+                </SignedIn>
                 <MobileNav />
             </div>
         </nav>
