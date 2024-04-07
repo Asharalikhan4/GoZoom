@@ -1,4 +1,4 @@
-import StreamVideoProvider from "@/providers/StreamClientProvider";
+import StreamVideoProvider from '@/providers/StreamClientProvider';
 import { Metadata } from "next";
 import { ReactNode } from "react";
 
