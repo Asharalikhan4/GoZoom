@@ -78,10 +78,6 @@
   color: white;
 }
 
-.cl-providerIcon__github {
-  filter: invert(1)
-}
-
 /* =============================== */
 
 @layer utilities {

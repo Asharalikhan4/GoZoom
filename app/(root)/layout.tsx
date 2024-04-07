@@ -1,23 +1,13 @@
-import StreamVideoProvider from "@/providers/streamClientProvider";
-import { Metadata } from "next";
-import { ReactNode } from "react";
+import { ReactNode } from 'react';
 
-export const metadata: Metadata = {
-    title: "GoZoom",
-    description: "Video calling app",
-    icons: {
-      icon: "/icons/logo.svg",
-    }
-  };
+import StreamVideoProvider from '@/providers/StreamClientProvider';
 
-const RootLayout = ({ children }: { children: ReactNode }) => {
-    return (
-        <main>
-            <StreamVideoProvider>
-                {children}
-            </StreamVideoProvider>
-        </main>
-    );
+const RootLayout = ({ children }: Readonly<{ children: ReactNode }>) => {
+  return (
+    <main>
+      <StreamVideoProvider>{children}</StreamVideoProvider>
+    </main>
+  );
 };
 
 export default RootLayout;
