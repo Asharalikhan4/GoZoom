@@ -1,4 +1,4 @@
-import { authMiddleware } from "@clerk/nextjs";
+import { authMiddleware } from '@clerk/nextjs/server';
 
 const protectedRoutes = {
     matcher: ([
@@ -12,12 +12,9 @@ const protectedRoutes = {
 };
 
 export default authMiddleware((auth, req) => {
-    if(protectedRoutes(req)) auth().protect();
+  if (protectedRoutes(req)) auth().protect();
 });
 
 export const config = {
-    matcher: [
-        "/((?!.+\\.[\\w]+$|_next).*)",
-        "/(api|trpc)(.*)"
-    ]
+  matcher: ['/((?!.+\\.[\\w]+$|_next).*)', '/', '/(api|trpc)(.*)'],
 };
